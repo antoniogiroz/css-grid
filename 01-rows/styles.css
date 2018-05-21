@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  /* grid-template-columns: 200px 200px 25%;
+  grid-template-rows: 300px 150px;*/
+
+  /* Shorthand: grid-template: rows / columns; */
+  grid-template: 300px 150px / 200px 200px 25%;
+}
+
+.item {
+  background: olivedrab;
+  border: 2px solid orange;
+  padding: 10px;
+}
