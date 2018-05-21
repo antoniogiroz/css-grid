@@ -18,35 +18,49 @@ body {
   padding: 10px;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.item p {
+  margin: 0;
+  font-family: monospace;
 }
 
 .item:nth-child(1) {
   background: orange;
   border: 2px solid olivedrab;
 
+  /* https://css-tricks.com/snippets/css/complete-guide-grid/#article-header-id-27 */
   /* grid-column-start: 1;
   grid-column-end: 3; */
 
   /* Shorthand: grid-column: start / end */
-  grid-column: 1 / 3; /* Number of grid line, not grid cell */
+  grid-column: 1 / 3; /* Number of grid lines, not grid cell */
+
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
+
+  /* Shorthand: grid-row: start / end */
+  grid-row: 1 / span 2; /* Number of cells to span */
 }
 
-.item:nth-child(5) {
+.item:nth-child(3) {
   background: orange;
   border: 2px solid olivedrab;
-  grid-column: 2 / 4;
+  grid-row: 2 / 4;
 }
 
 .item:nth-child(8) {
   background: orange;
   border: 2px solid olivedrab;
-  grid-column: 2 / span 3; /* Start in line 2 and take 3 columns */
+  grid-row: 2 / -1;
 }
 
-.item:nth-child(9) {
+.item:nth-child(14) {
   background: orange;
   border: 2px solid olivedrab;
-  grid-column: 1 / -1; /* Start in line 1 until last line */
+  grid-column: 1 / -2;
+  grid-row: auto / span 2;
 }
