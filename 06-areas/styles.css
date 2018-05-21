@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 10px;
+
+  /* Rows and columns sizes */
+  grid-template: 150px 1fr 50px / 250px 1fr;
+
+  /* Grid areas definition */
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+}
+
+.header {
+  background: lightgreen;
+  grid-area: header;
+}
+
+.sidebar {
+  background: lightcoral;
+  grid-area: sidebar;
+}
+
+.content {
+  background: lightblue;
+  grid-area: content;
+}
+
+.footer {
+  background: lightslategray;
+  grid-area: footer;
+}
