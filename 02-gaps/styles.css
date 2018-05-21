@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template: 300px 150px / 200px 200px 25%;
+
+  /* grid-column-gap: 30px;
+  grid-row-gap: 10px; */
+
+  /* Shorthand: grid-gap: rows columns; */
+  grid-gap: 10px 30px;
+}
+
+.item {
+  background: olivedrab;
+  border: 2px solid orange;
+  padding: 10px;
+}
