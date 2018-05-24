@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid - Grid alignment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="toolbar">
+      <div class="group">
+        <label for="justifyContent">Justify content:</label>
+        <select id="justifyContent" v-model="contentAlignment.justifyContent">
+          <option v-for="(option, index) in alignOptions" :key="index" :value="option">
+            {{option}}
+          </option>
+        </select>
+      </div>
+
+      <div class="group">
+        <label for="alignContent">Align content:</label>
+        <select id="alignContent" v-model="contentAlignment.alignContent">
+          <option :value="option" v-for="(option, index) in alignOptions" :key="index">
+            {{option}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <section class="container" :style="contentAlignment">
+      <div class="item">Item #1</div>
+      <div class="item">Item #2</div>
+      <div class="item">Item #3</div>
+      <div class="item">Item #4</div>
+      <div class="item">Item #5</div>
+      <div class="item">Item #6</div>
+      <div class="item">Item #7</div>
+      <div class="item">Item #8</div>
+      <div class="item">Item #9</div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
